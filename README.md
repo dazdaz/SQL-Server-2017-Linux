@@ -1,3 +1,4 @@
+<pre>
 # Demo 1
 # Quick demo of running the container version of SQL-Server-2017-Linux
 
@@ -27,3 +28,4 @@ docker rm sql1
 docker stop mssqldata
 # Delete database (don't)
 docker volume rm mssqldata
+</pre>
