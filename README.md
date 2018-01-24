@@ -15,7 +15,8 @@ exit 0
 
 # Demo 2
 # Create the volume container – To view volumes, use “docker ps –a”
-docker create -v /var/opt/mssql/mssqldockerdata --name mssqldata microsoft/mssql-server-linux:2017-latest /bin/true
+# Database is wrote here on the VM : /var/lib/docker/volumes/sqlvolume/
+docker create -v /var/opt/mssql/data --name mssqldata microsoft/mssql-server-linux:2017-latest /bin/true
 
 # Run SQL Server 2017 for Linux
 docker run -d -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=S3^ret82!' -p 1433:1433 --volumes-from mssqldata --name sql1 microsoft/mssql-server-linux:2017-latest
