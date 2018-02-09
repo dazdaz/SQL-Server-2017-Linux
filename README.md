@@ -33,3 +33,4 @@ docker volume rm mssqldata
 
 Links :
 https://www.slideshare.net/TravisWright4
+https://www.youtube.com/watch?v=DEUeAgLCAng Excellent 10 minute video on howto configure pacemaker for SQL Server on Linux
