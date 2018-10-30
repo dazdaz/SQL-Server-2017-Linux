@@ -102,3 +102,7 @@ spec:
   type: LoadBalancer
 
 ```
+
+* http://aka.ms/sqlcontainers
+* https://github.com/Microsoft/sqllinuxlabs
+* https://github.com/Microsoft/bobsql/tree/master/demos
