@@ -1,7 +1,7 @@
 ## Demo 1
 * Quick demo of running the container version of SQL-Server-2017-Linux
 ```
-docker run --name sql1 -d -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=S3^ret82!' -v sqlvolume:/var/opt/mssql -p 1433:1433 mcr.microsoft.com/mssql/server:2017-CU8
+docker run --name sql1 -d -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=S3^ret82!' -v sqlvolume:/var/opt/mssql -p 1433:1433 mcr.microsoft.com/mssql/server:2017-latest-ubuntu
 
 # Check that SQL Server 2017 on Linux was launched and is running as a Docker process
 docker ps
@@ -10,6 +10,9 @@ docker ps
 docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P 'S3^ret82!' -Q 'SELECT @@VERSION'
 
 exit 0
+```
+```
+You can hardcore the release number of SQL Server 2017 - mcr.microsoft.com/mssql/server:2017-CU8
 ```
 
 ## Demo 2
