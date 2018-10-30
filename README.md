@@ -106,3 +106,4 @@ spec:
 * http://aka.ms/sqlcontainers
 * https://github.com/Microsoft/sqllinuxlabs
 * https://github.com/Microsoft/bobsql/tree/master/demos
+* https://github.com/Microsoft/sql-server-samples
