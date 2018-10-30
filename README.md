@@ -107,3 +107,18 @@ spec:
 * https://github.com/Microsoft/sqllinuxlabs
 * https://github.com/Microsoft/bobsql/tree/master/demos
 * https://github.com/Microsoft/sql-server-samples
+
+What?s new in SQL Server on Linux and containers
+https://medius.studios.ms/Embed/Video/IG18-BRK3228?SFYT=true
+https://mediusprodstatic.studios.ms/presentations/Ignite2018/BRK3228.pptx
+
+Inside SQL Server containers
+https://medius.studios.ms/Embed/Video/IG18-BRK4017?SFYT=true
+https://mediusprodstatic.studios.ms/presentations/Ignite2018/BRK4017.pptx
+
+Databases, containers, and pods: SQL Server on Kubernetes
+https://medius.studios.ms/Embed/Video/IG18-THR2096?SFYT=true
+https://mediusprodstatic.studios.ms/presentations/Ignite2018/THR2096.pptx
+
+Deploying a highly available SQL Server solution in Kubernetes
+https://medius.studios.ms/Embed/Video/IG18-THR2171?SFYT=true
