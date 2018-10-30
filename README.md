@@ -13,6 +13,7 @@ exit 0
 ```
 ```
 You can hardcore the release number of SQL Server 2017 - mcr.microsoft.com/mssql/server:2017-CU10
+mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0 SQL Server 2019
 ```
 
 ## Demo 2
