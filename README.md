@@ -12,7 +12,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P 'S3^ret82
 exit 0
 ```
 ```
-You can hardcore the release number of SQL Server 2017 - mcr.microsoft.com/mssql/server:2017-CU8
+You can hardcore the release number of SQL Server 2017 - mcr.microsoft.com/mssql/server:2017-CU10
 ```
 
 ## Demo 2
