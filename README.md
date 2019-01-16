@@ -39,8 +39,38 @@ Links :
 https://www.slideshare.net/TravisWright4
 https://www.youtube.com/watch?v=DEUeAgLCAng Excellent 10 minute video on howto configure pacemaker for SQL Server on Linux
 
-
 ## Demo 3
+* Execute all the SQL files in a mounted folder:
+```
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    environment: 
+      - SA_PASSWORD=Admin123
+      - ACCEPT_EULA=Y
+    volumes:
+     - ./data/mssql:/scripts/
+    command:
+      - /bin/bash
+      - -c 
+      - |
+        # Launch MSSQL and send to background
+        /opt/mssql/bin/sqlservr &
+        # Wait 30 seconds for it to be available
+        # (lame, I know, but there's no nc available to start prodding network ports)
+        sleep 30
+        # Run every script in /scripts
+        # TODO set a flag so that this is only done once on creation, 
+        #      and not every time the container runs
+        for foo in /scripts/*.sql
+          do /opt/mssql-tools/bin/sqlcmd -U sa -P $$SA_PASSWORD -l 30 -e -i $$foo
+        done
+        # So that the container doesn't shut down, sleep this thread
+        sleep infinity
+```
+* https://github.com/Microsoft/mssql-docker/issues/11#issuecomment-452272205
+
+
+## Demo 4
 ```
 kubectl create secret generic mssql --from-literal=SA_PASSWORD="{SA PASSWORD}"
 ```
